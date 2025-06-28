@@ -54,6 +54,13 @@ export default function ObrigadoPage() {
                   >
                     🗓️ Adicionar no Google Calendar
                   </a>
+                  <a
+                    href="/gps-evento.ics"
+                    download
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full text-center"
+                  >
+                    📅 Baixar para Agenda (iCal/Outlook)
+                  </a>
                 </div>
 
               </div>
