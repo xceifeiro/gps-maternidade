@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, MapPin, Calendar, MessageCircle, Users } from "lucide-react"
@@ -6,9 +8,9 @@ import Link from "next/link"
 
 export default function ObrigadoPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-emerald-50">
+    <div className="min-h-screen bg-gradient-to-r from-purple-50 to-rose-50">
       {/* Header de Confirmação */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-purple-500 to-rose-500 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="flex justify-center">
@@ -22,7 +24,7 @@ export default function ObrigadoPage() {
               <p className="text-xl opacity-90">Obrigada por se inscrever no evento GPS da Maternidade</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-2xl p-8 text-left max-w-2xl mx-auto">
+            <div className="bg-black/20 backdrop-blur rounded-2xl p-8 text-left max-w-2xl mx-auto">
               <h2 className="text-2xl font-bold mb-6 text-center">📌 Guarde bem essas informações:</h2>
 
               <div className="space-y-6">
@@ -40,18 +42,20 @@ export default function ObrigadoPage() {
                   <Calendar className="h-6 w-6 text-yellow-300 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-lg">Data e Horário:</h3>
-                    <p className="opacity-90">[Data a definir] às 14h</p>
+                    <p className="opacity-90">Dia 05 de Julho às 14h</p>
                   </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                  <a
+                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+GPS+da+Maternidade&dates=20250705T170000Z/20250705T220000Z&details=O+manual+que+toda+mãe+gostaria+de+ter+para+formar+vencedores&location=Instituto+SEB+–+A+Fábrica,+R.+Mariana+Junqueira,+Auditório,+Ribeirão+Preto+-+SP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-purple-900 shadow-xl hover:bg-purple-800 text-white px-6 py-3 rounded-full text-center"
+                  >
+                    🗓️ Adicionar no Google Calendar
+                  </a>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <Users className="h-6 w-6 text-yellow-300 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-lg">O que levar:</h3>
-                    <p className="opacity-90">• Documento com foto</p>
-                    <p className="opacity-90">• Comprovante de pagamento (digital)</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -59,7 +63,7 @@ export default function ObrigadoPage() {
       </section>
 
       {/* Próximos Passos */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-cyan-50/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-6">
@@ -67,8 +71,8 @@ export default function ObrigadoPage() {
               <p className="text-lg text-gray-700">Para garantir que você aproveite ao máximo sua experiência</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
+            <div className="">
+              <Card className="bg-green-500/10 rounded-xl border-0 shadow-lg">
                 <CardContent className="p-8 space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="bg-blue-100 p-3 rounded-full">
@@ -79,11 +83,13 @@ export default function ObrigadoPage() {
                   <p className="text-gray-600">
                     Para receber informações atualizadas e se conectar com outras mães, entre no nosso grupo exclusivo:
                   </p>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">Entrar no Grupo do WhatsApp</Button>
+                  <Button className="w-full bg-green-600 hover:bg-green-700"
+                  onClick = {() => {window.open("https://chat.whatsapp.com/K70Zh16LxGa5MRgkV9Z67d?mode=ac_c", '_blank') }}
+                  >Entrar no Grupo do WhatsApp</Button>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-lg">
+              {/*<Card className="border-0 shadow-lg">
                 <CardContent className="p-8 space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="bg-purple-100 p-3 rounded-full">
@@ -102,6 +108,7 @@ export default function ObrigadoPage() {
                   </Button>
                 </CardContent>
               </Card>
+              */}
             </div>
           </div>
         </div>
@@ -142,7 +149,7 @@ export default function ObrigadoPage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=200&width=200"
+                src="/favicon.png?height=200&width=200"
                 alt="Coração acolhedor"
                 width={200}
                 height={200}
@@ -158,21 +165,28 @@ export default function ObrigadoPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-2xl p-8 max-w-2xl mx-auto">
+            {/*<div className="bg-white/10 backdrop-blur rounded-2xl p-8 max-w-2xl mx-auto">
               <p className="text-lg font-semibold">
                 "A maternidade consciente começa com o primeiro passo. Você acabou de dar o seu. Parabéns!"
               </p>
+              
               <p className="text-sm opacity-75 mt-4">— Equipe GPS da Maternidade</p>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
 
       {/* Rodapé */}
       <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">&copy; 2024 GPS da Maternidade. Todos os direitos reservados.</p>
-        </div>
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>
+                  &copy; 2025 GPS da Maternidade | Todos os direitos reservados. Desenvolvido por{" "}
+                  <a className="text-blue-700" href="https://autonextech.com.br">
+                    <b>AutoNex</b>
+                  </a>
+                </p>
+                <p className="text-sm mt-2">Pagamento seguro • Garantia de satisfação</p>
+              </div>
       </footer>
     </div>
   )
