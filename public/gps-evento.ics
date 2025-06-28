@@ -2,10 +2,10 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//GPS da Maternidade//EN
 BEGIN:VEVENT
-UID:20240705T140000Z@evento.4temperamentos.com.br
+UID:20250705T170000Z@evento.4temperamentos.com.br
 DTSTAMP:20240627T120000Z
-DTSTART:20250705T150000Z
-DTEND:20250705T210000Z
+DTSTART:20250705T170000Z
+DTEND:20250705T220000Z
 SUMMARY:Evento GPS da Maternidade
 DESCRIPTION:O manual que toda mãe gostaria de ter para formar vencedores.
 LOCATION:Instituto SEB – A Fábrica, R. Mariana Junqueira, Auditório – sala 50, Ribeirão Preto – SP
