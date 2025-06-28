@@ -749,13 +749,7 @@ export default function LandingPage() {
                     <Button
                       size="lg"
                       className="w-full bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900 py-4 sm:py-6 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-2 border-yellow-300 mb-4"
-                      onClick={() => {
-                        if (eventUrl) {
-                          window.open(eventUrl, '_blank')
-                        } else {
-                          console.error('URL do evento não está definida')
-                        }
-                      }}
+                      onClick={() => {window.open("https://sun.eduzz.com/Z0B51E36WA", '_blank') }}
                     >
                       <span className="hidden sm:inline">🎟️ GARANTIR MINHA VAGA AGORA</span>
                       <span className="sm:hidden">🎟️ GARANTIR VAGA</span>
