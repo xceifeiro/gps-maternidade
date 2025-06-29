@@ -156,7 +156,7 @@ export default function ObrigadoPage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="relative">
               <Image
-                src="/favicon.png?height=200&width=200"
+                src="https://evento.4temperamentos.com.br/favicon.png?height=200&width=200"
                 alt="Coração acolhedor"
                 width={200}
                 height={200}

@@ -724,7 +724,7 @@ export default function LandingPage() {
                           <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300 mx-auto mb-2" />
                           <div className="text-xs sm:text-sm text-white/80">Data</div>
                           <div className="font-bold text-sm sm:text-base">05 de Julho</div>
-                          <div className="text-xs text-white/70">Sexta • 14h</div>
+                          <div className="text-xs text-white/70">Sábado • 14h</div>
                         </div>
                         <div className="text-center p-3 sm:p-4 bg-white/10 rounded-xl">
                           <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300 mx-auto mb-2" />
